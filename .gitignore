@@ -3,3 +3,10 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Large datasets
+data/processed/jobshield_clean.csv
+data/processed/train.csv
+
+# Trained model
+models/jobshield-distilbert-final/
