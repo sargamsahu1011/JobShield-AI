@@ -1,0 +1,938 @@
+[
+  {
+    "index": 163,
+    "job_id": 1670,
+    "title": "Office PA/Receptionist",
+    "location": "US, TN, BRENTWOOD",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Associate",
+    "required_education": "Associate Degree",
+    "industry": "Health, Wellness and Fitness",
+    "function": "Administrative",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.7527,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.3799
+      ],
+      [
+        "data entry",
+        0.2643
+      ],
+      [
+        "receptionist",
+        0.1655
+      ],
+      [
+        "entry",
+        0.1554
+      ],
+      [
+        "word",
+        0.0905
+      ],
+      [
+        "answering",
+        0.09
+      ],
+      [
+        "title office",
+        0.0875
+      ],
+      [
+        "customer service",
+        0.0864
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "clients",
+        -0.0852
+      ],
+      [
+        "our clients",
+        -0.071
+      ],
+      [
+        "our",
+        -0.0522
+      ],
+      [
+        "about",
+        -0.0477
+      ],
+      [
+        "learning",
+        -0.0373
+      ],
+      [
+        "reliable",
+        -0.0365
+      ],
+      [
+        "an",
+        -0.0353
+      ],
+      [
+        "reliable transportation",
+        -0.0345
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Job Duties Include:  \u2022 Deliveries and pick ups as needed (must have reliable transportation) \u2022 Scanning Documents \u2022 Answering multi line phone system \u2022 Placing orders for office supplies \u2022 Greeting clients \u2022 Light data entry  \u2022 General daily support for our Clients  We are looking for someone who:  \u2022 Is reliable \u2022 Is punctual, \u2022 Is eager to learn, \u2022 Can quickly prioritize job responsibilities  \u2022 Can work independently but also in a team environment  \u2022 Has excellent customer service skills.  This",
+    "requirements": "Requirements include:  \u2022 Proficiency with: Microsoft Word, Microsoft Excel",
+    "benefits": "Benefits offered are Health Insurance / Vacations / Bonuses ",
+    "full_text_len": 812
+  },
+  {
+    "index": 677,
+    "job_id": 6742,
+    "title": "Customer Service Representative",
+    "location": "US, IL, Chicago",
+    "department": "customer service",
+    "employment_type": "Full-time",
+    "required_experience": "Entry level",
+    "required_education": "High School or equivalent",
+    "industry": "Insurance",
+    "function": "Customer Service",
+    "has_company_logo": 1,
+    "has_questions": 0,
+    "telecommuting": 1,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.4885,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "secured benefits",
+        0.1837
+      ],
+      [
+        "service representative",
+        0.1413
+      ],
+      [
+        "customer service",
+        0.1125
+      ],
+      [
+        "secured",
+        0.1025
+      ],
+      [
+        "colorado",
+        0.0946
+      ],
+      [
+        "service",
+        0.0791
+      ],
+      [
+        "customer",
+        0.0682
+      ],
+      [
+        "of products",
+        0.0659
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "allied",
+        -0.0569
+      ],
+      [
+        "allied secured",
+        -0.0528
+      ],
+      [
+        "companies",
+        -0.046
+      ],
+      [
+        "agency",
+        -0.0426
+      ],
+      [
+        "an",
+        -0.0371
+      ],
+      [
+        "passionate",
+        -0.0356
+      ],
+      [
+        "is an",
+        -0.0344
+      ],
+      [
+        "our",
+        -0.0324
+      ]
+    ],
+    "company_profile": "Since\u00a02005,\u00a0Allied\u00a0Secured Benefits, a leading financial planning and insurance brokerage company, has helped thousands of clients secure their financial futures.Headquartered in Denver, Colorado,\u00a0Allied Secured Benefits\u00a0is an independent financial agency representing more than 20 insurance and\u00a0inve",
+    "description": "If you are passionate about helping people, you may be a good fit for our Customer Service Representative position. As a Customer Service Representative for Allied Secured Benefits, you will help manage Customer Accounts, respond to email inquiries, and help Customers sign up for the service that best suits their needs. This is a telecommute position and all Applicants must be comfortable working from their homes with little supervision.",
+    "requirements": "Basic Computer SkillsHome Computer with Internet AccessA Quiet Place in the Home to work",
+    "benefits": "High hourly pay, paid weeklyPTOPaid Holidays401K",
+    "full_text_len": 1452
+  },
+  {
+    "index": 686,
+    "job_id": 6790,
+    "title": "Customer Service Representative",
+    "location": "US, GA, Atlanta",
+    "department": "customer service",
+    "employment_type": "Full-time",
+    "required_experience": "Entry level",
+    "required_education": "High School or equivalent",
+    "industry": "Insurance",
+    "function": "Customer Service",
+    "has_company_logo": 1,
+    "has_questions": 0,
+    "telecommuting": 1,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.4885,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "secured benefits",
+        0.1837
+      ],
+      [
+        "service representative",
+        0.1413
+      ],
+      [
+        "customer service",
+        0.1125
+      ],
+      [
+        "secured",
+        0.1025
+      ],
+      [
+        "colorado",
+        0.0946
+      ],
+      [
+        "service",
+        0.0791
+      ],
+      [
+        "customer",
+        0.0682
+      ],
+      [
+        "of products",
+        0.0659
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "allied",
+        -0.0569
+      ],
+      [
+        "allied secured",
+        -0.0528
+      ],
+      [
+        "companies",
+        -0.046
+      ],
+      [
+        "agency",
+        -0.0426
+      ],
+      [
+        "an",
+        -0.0371
+      ],
+      [
+        "passionate",
+        -0.0356
+      ],
+      [
+        "is an",
+        -0.0344
+      ],
+      [
+        "our",
+        -0.0324
+      ]
+    ],
+    "company_profile": "Since\u00a02005,\u00a0Allied\u00a0Secured Benefits, a leading financial planning and insurance brokerage company, has helped thousands of clients secure their financial futures.Headquartered in Denver, Colorado,\u00a0Allied Secured Benefits\u00a0is an independent financial agency representing more than 20 insurance and\u00a0inve",
+    "description": "If you are passionate about helping people, you may be a good fit for our Customer Service Representative position. As a Customer Service Representative for Allied Secured Benefits, you will help manage Customer Accounts, respond to email inquiries, and help Customers sign up for the service that best suits their needs. This is a telecommute position and all Applicants must be comfortable working from their homes with little supervision.",
+    "requirements": "Basic Computer SkillsHome Computer with Internet AccessA Quiet Place in the Home to work",
+    "benefits": "High hourly pay, paid weeklyPTOPaid Holidays401K",
+    "full_text_len": 1452
+  },
+  {
+    "index": 696,
+    "job_id": 6907,
+    "title": "Administrative Assistant",
+    "location": "US, , Shawnee",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Administrative",
+    "has_company_logo": 0,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.7653,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.4
+      ],
+      [
+        "administrative assistant",
+        0.2293
+      ],
+      [
+        "assistant",
+        0.2286
+      ],
+      [
+        "title administrative",
+        0.2204
+      ],
+      [
+        "administrative",
+        0.2177
+      ],
+      [
+        "phones",
+        0.1282
+      ],
+      [
+        "assistant company",
+        0.12
+      ],
+      [
+        "calls",
+        0.1075
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "individual",
+        -0.0555
+      ],
+      [
+        "of microsoft",
+        -0.0498
+      ],
+      [
+        "on",
+        -0.0486
+      ],
+      [
+        "open",
+        -0.0469
+      ],
+      [
+        "pride",
+        -0.0389
+      ],
+      [
+        "and job",
+        -0.0378
+      ],
+      [
+        "fast",
+        -0.0374
+      ],
+      [
+        "an",
+        -0.0372
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Open/close office, manage phones, greet and direct visitor'sProvide one-on-one assistance to the President of companyMaintain calendars and appointment schedulesOversight &amp; reporting of A/R and accounts payableGeneral office duties: email, mail sorting, scanning, faxing, return calls, tidyingMaintain inventory and suppliesAvailable to answer evening &amp; weekend emergency calls35-40 hours per week",
+    "requirements": "Must take PRIDE in work tasksSuperb Customer Service skillsStrong knowledge of Microsoft Windows and internetProficient in Microsoft Office: Word, ExcelKnowledge of business equipment such as printers, fax and scannersMust be able to thrive in a fast paced environment but self-start during low volum",
+    "benefits": "Compensation is determined on an individual basis depending on previous experience and job skills.",
+    "full_text_len": 891
+  },
+  {
+    "index": 796,
+    "job_id": 7898,
+    "title": "Executive Administrative Assistant",
+    "location": "US, VA, Arlington",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.6987,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "administrative",
+        0.3165
+      ],
+      [
+        "assistant",
+        0.2692
+      ],
+      [
+        "company description",
+        0.1974
+      ],
+      [
+        "administrative assistant",
+        0.1916
+      ],
+      [
+        "clerical",
+        0.0981
+      ],
+      [
+        "preparation",
+        0.0915
+      ],
+      [
+        "word",
+        0.0797
+      ],
+      [
+        "assistant company",
+        0.0592
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "agency",
+        -0.0852
+      ],
+      [
+        "activity",
+        -0.0309
+      ],
+      [
+        "meetings",
+        -0.0306
+      ],
+      [
+        "read",
+        -0.0262
+      ],
+      [
+        "clients",
+        -0.0261
+      ],
+      [
+        "the agency",
+        -0.0259
+      ],
+      [
+        "order",
+        -0.0256
+      ],
+      [
+        "it",
+        -0.0256
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "The Executive Assistant shall be responsible for providing administrative support services as well as guidance and program supportwithin a variety of administrative, analytical and financial related functions. Executive Assistant is expected to providerecommendations for improvements in administrative processes, data compilations and administrative financial tasks.\u2022 Assist in the preparation of presentation materials\u2022 Provide general office and research, administrative and clerical support, word",
+    "requirements": "Ability to communicate effectively, both orally and in writing\u2022 Ability to perform multiple tasks and prioritize responsibilities in a dynamic, fast paced working environment\u2022 Ability to read and interpret management policy, regulations and directives\u2022 Proficiency in Microsoft Office Products includ",
+    "benefits": "Contract/Contract-to-Hire position: No Benefits or PTO Accrual",
+    "full_text_len": 3017
+  },
+  {
+    "index": 1141,
+    "job_id": 11136,
+    "title": "Assistant Chief Nursing Officer (hospital west of Montgomery, AL)",
+    "location": "US, AL, Montgomery",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Mid-Senior level",
+    "required_education": "Bachelor's Degree",
+    "industry": "Hospital & Health Care",
+    "function": "Health Care Provider",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.5257,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.4757
+      ],
+      [
+        "rn",
+        0.3972
+      ],
+      [
+        "assistant",
+        0.2718
+      ],
+      [
+        "hospital",
+        0.2439
+      ],
+      [
+        "000",
+        0.1996
+      ],
+      [
+        "req",
+        0.1389
+      ],
+      [
+        "nursing",
+        0.091
+      ],
+      [
+        "title assistant",
+        0.0764
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "officer",
+        -0.0723
+      ],
+      [
+        "general acute",
+        -0.0619
+      ],
+      [
+        "all aspects",
+        -0.0561
+      ],
+      [
+        "al",
+        -0.056
+      ],
+      [
+        "quality oriented",
+        -0.0509
+      ],
+      [
+        "centers",
+        -0.0482
+      ],
+      [
+        "west",
+        -0.0429
+      ],
+      [
+        "with other",
+        -0.0422
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Must be willing to eventually transition into CNO position.Description: Assist/support the CNO with all aspects; RN lic. AL &amp; BSN req\u2019d.Salary: range $100,000 \u2013 $110,000",
+    "requirements": "RN lic. AL &amp; BSN req\u2019dPrevious general-acute-care hospital nurse management experience.",
+    "benefits": "Generous benefits package on par with other quality-oriented, regional medical centers.",
+    "full_text_len": 473
+  },
+  {
+    "index": 1226,
+    "job_id": 12242,
+    "title": "Teaching Assistant",
+    "location": "US, FL, Jacksonville",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.9136,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.7726
+      ],
+      [
+        "assistant",
+        0.4415
+      ],
+      [
+        "requirements high",
+        0.3148
+      ],
+      [
+        "high school",
+        0.2493
+      ],
+      [
+        "assistant company",
+        0.2318
+      ],
+      [
+        "requirements benefits",
+        0.13
+      ],
+      [
+        "school diploma",
+        0.1271
+      ],
+      [
+        "school",
+        0.1227
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "in all",
+        -0.1063
+      ],
+      [
+        "teaching",
+        -0.0817
+      ],
+      [
+        "teacher",
+        -0.0738
+      ],
+      [
+        "of the",
+        -0.0545
+      ],
+      [
+        "the assigned",
+        -0.0425
+      ],
+      [
+        "competitive",
+        -0.0365
+      ],
+      [
+        "all areas",
+        -0.0336
+      ],
+      [
+        "competitive salary",
+        -0.0329
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Requirements:\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "requirements": "nan",
+    "benefits": "nan",
+    "full_text_len": 3060
+  },
+  {
+    "index": 1322,
+    "job_id": 13085,
+    "title": "Bilingual Products and Services Coordinator II",
+    "location": "US, FL, St. Petersburg",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 1,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.5393,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "data entry",
+        0.1978
+      ],
+      [
+        "company description",
+        0.168
+      ],
+      [
+        "entry",
+        0.1163
+      ],
+      [
+        "high school",
+        0.0918
+      ],
+      [
+        "answering",
+        0.0835
+      ],
+      [
+        "customer service",
+        0.0802
+      ],
+      [
+        "customer",
+        0.0651
+      ],
+      [
+        "program",
+        0.0628
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "english",
+        -0.0617
+      ],
+      [
+        "order",
+        -0.0369
+      ],
+      [
+        "bilingual",
+        -0.0349
+      ],
+      [
+        "team",
+        -0.0348
+      ],
+      [
+        "year",
+        -0.0283
+      ],
+      [
+        "of customer",
+        -0.0246
+      ],
+      [
+        "english and",
+        -0.0235
+      ],
+      [
+        "knowledge of",
+        -0.0221
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "MUST BE BILINGUAL (English/Spanish)Provide excellent customer service to internal and external customers as well as able to perform back office data entry functions. Direct phone communication with external customers and internal departments, assuring that customer\u2019s needs are met while exceeding expectations. Position shares responsibility for accomplishment of FPSC mandated Demand Response (DR) goals by resolving inquiries that may include answering technical and program-related questions to p",
+    "requirements": "Requirements:-Bilingual candidate must be fluent and have a high level of comprehension in both English and Spanish.-Requires the ability to use technical analysis and investigative techniques.-Must have working knowledge of Customer Service Systems, Work Order Management Systems and product and pro",
+    "benefits": "nan",
+    "full_text_len": 3696
+  },
+  {
+    "index": 1659,
+    "job_id": 16639,
+    "title": "Immediate Opening : Help Desk /Technical Support Coordinator",
+    "location": "QA, , Doha",
+    "department": "Information Technology",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 1,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 0,
+    "pred": 1,
+    "fraud_score": 0.4674,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "vam",
+        0.1258
+      ],
+      [
+        "vam systems",
+        0.1258
+      ],
+      [
+        "qatar",
+        0.0902
+      ],
+      [
+        "calls",
+        0.064
+      ],
+      [
+        "bahrain",
+        0.0592
+      ],
+      [
+        "systems is",
+        0.0555
+      ],
+      [
+        "immediate",
+        0.0476
+      ],
+      [
+        "call",
+        0.0424
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "it",
+        -0.0612
+      ],
+      [
+        "government offerings",
+        -0.0478
+      ],
+      [
+        "amp government",
+        -0.0471
+      ],
+      [
+        "infrastructure",
+        -0.0443
+      ],
+      [
+        "cloud",
+        -0.0326
+      ],
+      [
+        "technical support",
+        -0.0316
+      ],
+      [
+        "team",
+        -0.0308
+      ],
+      [
+        "list",
+        -0.029
+      ]
+    ],
+    "company_profile": "VAM SYSTEMS\u00a0is a Business Consulting, IT Solutions and Services\u00a0company with operations in UAE, Qatar, Bahrain, USA, Australia, Singapore &amp; India. . We offers a comprehensive list of services in the field of IT infrastructure management, Cloud services, IT Consulting Services, Banking, Managemen",
+    "description": "Greetings from VAM SYSTEMS\u2026..VAM SYSTEMS\u00a0is a Business Consulting, IT Solutions and Services\u00a0company with operations in UAE, Qatar, Bahrain, USA, Australia, Singapore &amp; India. . We offers a comprehensive list of services in the field of IT infrastructure management, Cloud services, IT Consulting Services, Banking, Management Resources, Information Technology Development, Telecom, Aviation, Retail Management &amp; Government offerings.VAM SYSTEMS is currently looking for Help Desk / Technical",
+    "requirements": "Skill Set required:Should have excellent communication skills, strong writing and reading skills, ability to work in and contribute to a team environmentShould have comprehensive knowledge of computer hardware and software with the strong troubleshooting ability.Should have experience in managing cu",
+    "benefits": "nan",
+    "full_text_len": 2529
+  }
+]

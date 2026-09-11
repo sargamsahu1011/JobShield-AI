@@ -1,6 +1,11 @@
-from predict import predict_job
-from scam_signals import detect_scam_signals
-from evidence_extractor import extract_evidence
+try:
+    from ml.predict import predict_job
+    from ml.scam_signals import detect_scam_signals
+    from ml.evidence_extractor import extract_evidence
+except ImportError:
+    from predict import predict_job
+    from scam_signals import detect_scam_signals
+    from evidence_extractor import extract_evidence
 
 
 TEST_CASES = {

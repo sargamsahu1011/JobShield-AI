@@ -1,0 +1,1574 @@
+[
+  {
+    "index": 54,
+    "job_id": 538,
+    "title": "Technology Consultant - Outside Sales  ",
+    "location": "US, OH, ",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Information Technology and Services",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.048,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2657
+      ],
+      [
+        "description apply",
+        0.2092
+      ],
+      [
+        "administrative",
+        0.1446
+      ],
+      [
+        "link",
+        0.138
+      ],
+      [
+        "below",
+        0.0795
+      ],
+      [
+        "apply",
+        0.0624
+      ],
+      [
+        "customer",
+        0.0546
+      ],
+      [
+        "mail",
+        0.045
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "our",
+        -0.0766
+      ],
+      [
+        "it",
+        -0.0723
+      ],
+      [
+        "technology",
+        -0.0536
+      ],
+      [
+        "revenue",
+        -0.0447
+      ],
+      [
+        "was",
+        -0.0426
+      ],
+      [
+        "consultative",
+        -0.0395
+      ],
+      [
+        "client",
+        -0.0373
+      ],
+      [
+        "businesses",
+        -0.0368
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Apply below using link#URL_00962c0bdac3ecf40b2931cbb6493290c8712818f9b055eb964210d5ecab508a#SkyNet Managed Technology Services, a leading IT consulting firmbased in Columbus, Ohio, is seeking a dynamic sales professionalwho can hunt, identify opportunities, and sell technology solutionsand professional services. This is a consultative sales positiondealing directly with a variety of business contacts from C-Levelto Administrative. Experience in selling technology serviceswill give you the advant",
+    "requirements": "nan",
+    "benefits": "nan",
+    "full_text_len": 2229
+  },
+  {
+    "index": 468,
+    "job_id": 4762,
+    "title": "COMPANY REPRESENTATIVE NEEDED",
+    "location": "US, NY, mumford",
+    "department": "Unknown",
+    "employment_type": "Contract",
+    "required_experience": "Not Applicable",
+    "required_education": "High School or equivalent",
+    "industry": "Civic & Social Organization",
+    "function": "Finance",
+    "has_company_logo": 0,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1552,
+    "signals": {
+      "payment_request": true,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.4675
+      ],
+      [
+        "per",
+        0.1063
+      ],
+      [
+        "part time",
+        0.0994
+      ],
+      [
+        "representative",
+        0.0882
+      ],
+      [
+        "least 18",
+        0.0854
+      ],
+      [
+        "opening",
+        0.0778
+      ],
+      [
+        "immediate",
+        0.0777
+      ],
+      [
+        "10",
+        0.0674
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "our",
+        -0.0642
+      ],
+      [
+        "world",
+        -0.0479
+      ],
+      [
+        "will be",
+        -0.0479
+      ],
+      [
+        "on",
+        -0.0458
+      ],
+      [
+        "base",
+        -0.0444
+      ],
+      [
+        "an",
+        -0.0434
+      ],
+      [
+        "help",
+        -0.0415
+      ],
+      [
+        "be",
+        -0.0396
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Our motherless world for Charity location has an immediate part-time opening for a Company Representative. Must be available weekdays and weekends. Wage: $10 per hour. Must be at least 18 years old. Must have some experience. Be authorized to work in the United #URL_621ecc6fa2b9373499da4ba5ee79700d59706de03cf260ff4122443159b609a1# someone to help collect funds from creditors",
+    "requirements": "must have a paypal account.",
+    "benefits": "bonus will be given base on base on the amount help to collect.",
+    "full_text_len": 553
+  },
+  {
+    "index": 629,
+    "job_id": 6286,
+    "title": "Senior Engineer Shawnee, KS",
+    "location": "US, KS, Shawnee",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1956,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.1756
+      ],
+      [
+        "engineering",
+        0.0782
+      ],
+      [
+        "mechanical",
+        0.0577
+      ],
+      [
+        "experiance",
+        0.0462
+      ],
+      [
+        "in ms",
+        0.0442
+      ],
+      [
+        "operations",
+        0.044
+      ],
+      [
+        "applicable",
+        0.0436
+      ],
+      [
+        "six sigma",
+        0.0435
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "understanding",
+        -0.0411
+      ],
+      [
+        "understanding of",
+        -0.0385
+      ],
+      [
+        "site",
+        -0.0339
+      ],
+      [
+        "degree required",
+        -0.0331
+      ],
+      [
+        "based",
+        -0.0328
+      ],
+      [
+        "team",
+        -0.032
+      ],
+      [
+        "minimum years",
+        -0.0303
+      ],
+      [
+        "by",
+        -0.0299
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "1.Leads and executes projects from inception to project completion in support of company objectives insuring safety, regulatory compliance, company standards, operational requirements and business needs are met.2.Provide process/project engineering and/or project management support in achieving completion of assigned projects within approved scope, timeline and budget.3.Support the operations groups for ensuring proper deliverables for equipment and facilities and by ensuring up to date equipmen",
+    "requirements": "Requirements:Education Required: Bachelor\u2019s degree in Engineering (Chemical, Mechanical, Electrical) or science based degree required.Education Preferred: Master\u2019s degree in Engineering or Science preferred.Experience Required: Minimum 6 years of experience in industrial operations in similar role, ",
+    "benefits": "Salary:98K",
+    "full_text_len": 3559
+  },
+  {
+    "index": 701,
+    "job_id": 6975,
+    "title": "  Manager of Project Management Organization - Engineering",
+    "location": "US, TX, Houston",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Oil & Energy",
+    "function": "Project Management",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1704,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2144
+      ],
+      [
+        "engineering",
+        0.0846
+      ],
+      [
+        "oil",
+        0.0656
+      ],
+      [
+        "gas",
+        0.0613
+      ],
+      [
+        "project",
+        0.0568
+      ],
+      [
+        "six sigma",
+        0.0531
+      ],
+      [
+        "the oil",
+        0.0515
+      ],
+      [
+        "criteria",
+        0.0509
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "team of",
+        -0.052
+      ],
+      [
+        "least years",
+        -0.047
+      ],
+      [
+        "partnership",
+        -0.0418
+      ],
+      [
+        "driver",
+        -0.0333
+      ],
+      [
+        "drive",
+        -0.0329
+      ],
+      [
+        "essential",
+        -0.0325
+      ],
+      [
+        "years",
+        -0.0317
+      ],
+      [
+        "least",
+        -0.0317
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Job Duties/Responsibilities:Serve as the driver of communication and organization of all drilling projects.Lead moderate to large complex projects and programs by providing strategic direction to projects, peers, and direct reports.Design, develop, and manage project plans in a complex dynamic environment, revising needs to meet changing requirementsEnsure projects are being documented appropriately to mitigate risk and to be delivered on time.Leverage problem solving and influencing skills to e",
+    "requirements": "Skills/Knowledge:Ability to communicate well with internal and external customers in a professional mannerExhibit outstanding influencing skills to effectively drive project / program effortsDemonstrate a proven track record of excellent project management, bringing the ability to quickly put struct",
+    "benefits": "nan",
+    "full_text_len": 2471
+  },
+  {
+    "index": 811,
+    "job_id": 8058,
+    "title": "Marketing/sales Coordinator",
+    "location": "US, IL, chicago",
+    "department": "sales",
+    "employment_type": "Full-time",
+    "required_experience": "Associate",
+    "required_education": "High School or equivalent",
+    "industry": "Marketing and Advertising",
+    "function": "Marketing",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.0158,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2526
+      ],
+      [
+        "phone",
+        0.0741
+      ],
+      [
+        "of products",
+        0.0706
+      ],
+      [
+        "call",
+        0.0634
+      ],
+      [
+        "word",
+        0.0602
+      ],
+      [
+        "no",
+        0.0585
+      ],
+      [
+        "to 500",
+        0.0571
+      ],
+      [
+        "internet",
+        0.0549
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "marketing",
+        -0.0914
+      ],
+      [
+        "search",
+        -0.0555
+      ],
+      [
+        "growing",
+        -0.0481
+      ],
+      [
+        "the marketing",
+        -0.0388
+      ],
+      [
+        "and the",
+        -0.0382
+      ],
+      [
+        "company in",
+        -0.0374
+      ],
+      [
+        "team",
+        -0.0371
+      ],
+      [
+        "prospects",
+        -0.0362
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "DESCRIPTIONWho doesn\u2019t want a competitive compensation package AND the opportunity to work with a company that has reported 30% growth consecutively over the last few years and make up to $500 to $1000. (NO PHONE CALLS PLEASE ALL APPOINTMENTS SET BY APPOINTMENT ONLY)\u00a0We are excited to be leading the initiative for our\u00a0high end\u00a0clients, a growing\u00a0company in Chicago. The\u00a0Marketing and sales coordinator\u00a0is expected to build up a pipeline of leads for the sales team. The ideal candidate for the Mark",
+    "requirements": "REQUIREMENTSCoordinator Requirements:Two+\u00a0\u00a0\u00a0 years of experience in an appointment setting or\u00a0sales roleWillingness to attend training and workshops regularly to learn and improve performance.Experience\u00a0\u00a0\u00a0 interacting with executiveTechnology\u00a0\u00a0\u00a0 industry experience strongly preferredClear\u00a0\u00a0\u00a0 communi",
+    "benefits": "nan",
+    "full_text_len": 1845
+  },
+  {
+    "index": 1061,
+    "job_id": 10408,
+    "title": "Hotel Workers Needed",
+    "location": "GB",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Not Applicable",
+    "required_education": "High School or equivalent",
+    "industry": "Hospitality",
+    "function": "Customer Service",
+    "has_company_logo": 1,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1891,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "assistant",
+        0.2121
+      ],
+      [
+        "hotel",
+        0.1762
+      ],
+      [
+        "receptionist",
+        0.1147
+      ],
+      [
+        "the hotel",
+        0.0736
+      ],
+      [
+        "full timejob",
+        0.0634
+      ],
+      [
+        "timejob",
+        0.0619
+      ],
+      [
+        "minutes",
+        0.0548
+      ],
+      [
+        "office assistant",
+        0.05
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "officer",
+        -0.0616
+      ],
+      [
+        "our",
+        -0.0596
+      ],
+      [
+        "is the",
+        -0.0548
+      ],
+      [
+        "located",
+        -0.0414
+      ],
+      [
+        "marketing",
+        -0.0399
+      ],
+      [
+        "an",
+        -0.0377
+      ],
+      [
+        "london",
+        -0.0298
+      ],
+      [
+        "on",
+        -0.0297
+      ]
+    ],
+    "company_profile": "Hotel Verta, a luxury boutique hotel located on the River Thames, is the smart choice for an truly memorable London stay. Offering all the facilities you would expect from a deluxe Central London hotel, but located just outside the hustle and bustle of the city centre means we can offer so much more",
+    "description": "Ref: HOVER-ORC-B55UK07-14Hotel Verta, a luxury boutique hotel located on the River Thames, is the smart choice for an truly memorable London stay. Offering all the facilities you would expect from a deluxe Central London hotel, but located just outside the hustle and bustle of the city centre means we can offer so much more for so much less.Easily accessible, located just outside the congestion zone with ample onsite parking, and Hotel Verta is the hidden gem that enables you to save on rate wit",
+    "requirements": "Relocation EligibleDegree/Certification holder would be an added advantage.Minimum One (1) year working experience preferred.Computer skills (Microsoft Office - Excel and Word) would be an added advantage.Self-motivated and relationship-building abilities with co-workers.Goal-oriented with the abili",
+    "benefits": "SALARY AND BENEFITS: An attractive salary package depending on job position and level of experience will be offered to successful candidates. Competitive rates of pay, paid leave period and holidays, plus our company benefits which includes Employee Assistance Program (EAP), Pension Plan, Tuition As",
+    "full_text_len": 3859
+  },
+  {
+    "index": 1231,
+    "job_id": 12312,
+    "title": "Customer Service position",
+    "location": "US, NY, New York",
+    "department": "Unknown",
+    "employment_type": "Part-time",
+    "required_experience": "Entry level",
+    "required_education": "Unknown",
+    "industry": "Design",
+    "function": "Customer Service",
+    "has_company_logo": 1,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.0202,
+    "signals": {
+      "payment_request": true,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "customer service",
+        0.0994
+      ],
+      [
+        "000",
+        0.0991
+      ],
+      [
+        "earn",
+        0.0936
+      ],
+      [
+        "income",
+        0.0702
+      ],
+      [
+        "service",
+        0.0658
+      ],
+      [
+        "per",
+        0.0645
+      ],
+      [
+        "customer",
+        0.0567
+      ],
+      [
+        "and holidays",
+        0.0527
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "our",
+        -0.076
+      ],
+      [
+        "days",
+        -0.0462
+      ],
+      [
+        "was",
+        -0.0455
+      ],
+      [
+        "people who",
+        -0.0388
+      ],
+      [
+        "you will",
+        -0.0361
+      ],
+      [
+        "will",
+        -0.0356
+      ],
+      [
+        "we",
+        -0.0335
+      ],
+      [
+        "that",
+        -0.0332
+      ]
+    ],
+    "company_profile": "Fab is the place to discover the most exciting things for your life. Our modern, urban-inspired products allow everyone to design their lives and express their personal sense of style. Always unique, well-designed, and of the highest quality. Fab. Smiles. Guaranteed.",
+    "description": "Fab is a fast growing e-commerce company that sells 6 products per minute on average.We grow by attracting new designers, suppliers and manufacturers that sell unique products. As we attract more and more partners we need to service them and that is why we are looking for freelance customer service managers.Our company acts as a liaison between our partners and customers. Thus you will act on behalf of our company. You will receive proper company documents allowing you to assist us with local or",
+    "requirements": "- we need independent-minded and innovative business people who are interested in breaking out of the 9-5 environment,- we value leadership, independence, flexibility and creativity,- we count on people who have high attention to detail and a proven ability to complete multiple activities simultaneo",
+    "benefits": "Your compensation package includes a gross salary of $25.00/hour plus a monthly bonus based on the performance*, health insurance (Anthem Blue Cross, including Dental &amp; Vision insurance plans, with 50% of any family members also paid), a 401(k) plan with Intuit Inc.**, and paid vacations and hol",
+    "full_text_len": 3336
+  },
+  {
+    "index": 1680,
+    "job_id": 16861,
+    "title": "Process Validation Project Manager ",
+    "location": "US, NC, RTP ",
+    "department": "Engineering",
+    "employment_type": "Contract",
+    "required_experience": "Mid-Senior level",
+    "required_education": "Bachelor's Degree",
+    "industry": "Biotechnology",
+    "function": "Engineering",
+    "has_company_logo": 1,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.2108,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "engineering",
+        0.0858
+      ],
+      [
+        "10 years",
+        0.0841
+      ],
+      [
+        "fields in",
+        0.0609
+      ],
+      [
+        "six sigma",
+        0.0589
+      ],
+      [
+        "10",
+        0.0581
+      ],
+      [
+        "project",
+        0.0562
+      ],
+      [
+        "with skilled",
+        0.0525
+      ],
+      [
+        "exceed their",
+        0.0517
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "new",
+        -0.0572
+      ],
+      [
+        "product",
+        -0.0471
+      ],
+      [
+        "software",
+        -0.0384
+      ],
+      [
+        "years experience",
+        -0.0372
+      ],
+      [
+        "marketing",
+        -0.0361
+      ],
+      [
+        "technology",
+        -0.0342
+      ],
+      [
+        "capital",
+        -0.0311
+      ],
+      [
+        "experience",
+        -0.0297
+      ]
+    ],
+    "company_profile": "Maynard Consulting Company has more than 20 years experience in the biotechnology, pharmaceutical, medical device, chemical, and validation engineering fields. In addition, we have over 10 years in project management, software engineering, telecommunication, testing, and networking engineering.\u00a0 MCC",
+    "description": "Responsibility for the project management of assembly and packaging processes for manufacturing Sample Collection products/devices.Responsibility for supporting new product introductions with the concepting, prototyping and commercialization of new equipment technology.Works closely with Design, R&amp;D Marketing and manufacturing plants to implement manufacturing technology.Under the Engineering Manager Assembly, Contractor will be responsible for the project management of the concepting, proto",
+    "requirements": "10+ years\u2019 experience in high-speed automated equipment development or high volume manufacturing industry; healthcare, food products or pharmaceutical industry experience preferred.Experience in organizing and leading multi-function teams .Demonstrated capability in project management, with experien",
+    "benefits": "nan",
+    "full_text_len": 2099
+  },
+  {
+    "index": 1753,
+    "job_id": 17550,
+    "title": "Sales manager",
+    "location": "IN, , ",
+    "department": "Sales and Marketing ",
+    "employment_type": "Full-time",
+    "required_experience": "Mid-Senior level",
+    "required_education": "Unspecified",
+    "industry": "Accounting",
+    "function": "Accounting/Auditing",
+    "has_company_logo": 0,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.0665,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2803
+      ],
+      [
+        "discounts",
+        0.0714
+      ],
+      [
+        "personnel",
+        0.0616
+      ],
+      [
+        "develops",
+        0.0542
+      ],
+      [
+        "efficient",
+        0.0487
+      ],
+      [
+        "line",
+        0.0427
+      ],
+      [
+        "performs",
+        0.0319
+      ],
+      [
+        "assessments",
+        0.031
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "revenue",
+        -0.0799
+      ],
+      [
+        "growth",
+        -0.0478
+      ],
+      [
+        "product",
+        -0.0448
+      ],
+      [
+        "in all",
+        -0.0386
+      ],
+      [
+        "sales support",
+        -0.0351
+      ],
+      [
+        "to ensure",
+        -0.0345
+      ],
+      [
+        "resources to",
+        -0.0343
+      ],
+      [
+        "on",
+        -0.0341
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Collaborates with [Insert title] in establishing and recommending the most realistic sales goals for the company. \u2022 Manages an assigned geographic sales area or product line to maximize sales revenues and meet corporate objectives. \u2022 Establishes and manages effective programs to compensate, coach, appraise and train sales personnel.",
+    "requirements": "\u2022 Performs sales activities on major accounts and negotiates sales price and discounts in consultation with [Insert title]. \u2022 Manages personnel and develops sales and sales support staff. \u2022 Reviews progress of sales roles throughout the company. \u2022 Accurately forecasts annual, quarterly and monthly r",
+    "benefits": "Interprets short- and long-term effects on sales strategies in operating profit. \u2022 Educates sales team by establishing programs/seminars in the areas of new account sales and growth, sales of emerging products and multi-product sales, profitability, improved presentation strategies, competitive stra",
+    "full_text_len": 1426
+  },
+  {
+    "index": 1760,
+    "job_id": 17636,
+    "title": " Data Entry Representative",
+    "location": "US, TX, AUSTIN",
+    "department": "CSR CENTER",
+    "employment_type": "Full-time",
+    "required_experience": "Associate",
+    "required_education": "High School or equivalent",
+    "industry": "Consumer Services",
+    "function": "Customer Service",
+    "has_company_logo": 1,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1773,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "data entry",
+        0.1471
+      ],
+      [
+        "mitel",
+        0.1257
+      ],
+      [
+        "entry",
+        0.0865
+      ],
+      [
+        "requirements high",
+        0.0861
+      ],
+      [
+        "data",
+        0.0708
+      ],
+      [
+        "high school",
+        0.0682
+      ],
+      [
+        "contract",
+        0.0594
+      ],
+      [
+        "line",
+        0.0546
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "activity",
+        -0.0789
+      ],
+      [
+        "paperwork",
+        -0.0553
+      ],
+      [
+        "south",
+        -0.0504
+      ],
+      [
+        "to ensure",
+        -0.0367
+      ],
+      [
+        "by",
+        -0.036
+      ],
+      [
+        "revenue",
+        -0.0356
+      ],
+      [
+        "ensure",
+        -0.0343
+      ],
+      [
+        "mobile",
+        -0.0309
+      ]
+    ],
+    "company_profile": "Our globally connected world has forced businesses to rethink how they communicate. Mobile lifestyles, a flood of technology, economic pressures and an \u201calways on\u201d mentality have created both opportunity and challenges for organizations of all sizes. Mitel\u00ae (NASDAQ: MITL) (TSX: MNW) is a global lead",
+    "description": "Responsible for reviewing details of tickets to ensure they contain the data required by customers.Monitors the bin movements to ensure the activity seen matches the paperwork providedWatches contract levels vs volume remaining in bins and reports any discrepancy to quality managerProvides ticket copies to customers as neededAnswers any questions the customers may have on specific ticketsAdvises plant managers of any missing paperworkCollect paperwork from North and South Plant. Review bin infor",
+    "requirements": "HIGH SCHOOL DIPLOMAWORK GOOD ON A TEAM",
+    "benefits": "FULL TIMESALARY $35,000- $40,000HEALTH CARE, DENTAL, LIFE INSURANCE , STOCK PLAN OPTION",
+    "full_text_len": 2473
+  },
+  {
+    "index": 1766,
+    "job_id": 17730,
+    "title": "Intern Development Assistant",
+    "location": "US, CA, Los Angeles",
+    "department": "Programming",
+    "employment_type": "Other",
+    "required_experience": "Internship",
+    "required_education": "High School or equivalent",
+    "industry": "Entertainment",
+    "function": "Business Development",
+    "has_company_logo": 1,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.0496,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.4237
+      ],
+      [
+        "assistant",
+        0.2422
+      ],
+      [
+        "high school",
+        0.1367
+      ],
+      [
+        "assistant company",
+        0.1271
+      ],
+      [
+        "school diploma",
+        0.0697
+      ],
+      [
+        "school",
+        0.0673
+      ],
+      [
+        "and motivated",
+        0.0665
+      ],
+      [
+        "program",
+        0.0664
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "there",
+        -0.0933
+      ],
+      [
+        "students",
+        -0.0679
+      ],
+      [
+        "be in",
+        -0.0524
+      ],
+      [
+        "throughout the",
+        -0.0463
+      ],
+      [
+        "will be",
+        -0.0434
+      ],
+      [
+        "year",
+        -0.0421
+      ],
+      [
+        "los",
+        -0.0412
+      ],
+      [
+        "experience requirements",
+        -0.0398
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "We Are Looking for college interns with the passion to be in the entertainment industry. Industry Mogul Alander Pulliam has put together a youth and motivated program for college students throughout the Los Angeles market. To help college students enrich there knowledge and there experience.",
+    "requirements": "You will be working alongside of the Producers and writers, helping and developing shows to put onto the programming for the network, you are required to have a high school diploma, preferabbly a Bachelors Degree, at least one year of experience.",
+    "benefits": "nan",
+    "full_text_len": 623
+  },
+  {
+    "index": 1771,
+    "job_id": 17774,
+    "title": "Receptionist/ Admin",
+    "location": "US, NY, New York",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Entry level",
+    "required_education": "Certification",
+    "industry": "Accounting",
+    "function": "Administrative",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.2709,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.4519
+      ],
+      [
+        "receptionist",
+        0.3334
+      ],
+      [
+        "admin",
+        0.1483
+      ],
+      [
+        "title receptionist",
+        0.1188
+      ],
+      [
+        "duties",
+        0.1115
+      ],
+      [
+        "answering",
+        0.107
+      ],
+      [
+        "office duties",
+        0.0814
+      ],
+      [
+        "phone",
+        0.0782
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "an",
+        -0.0711
+      ],
+      [
+        "individual",
+        -0.0627
+      ],
+      [
+        "our",
+        -0.0621
+      ],
+      [
+        "our office",
+        -0.0509
+      ],
+      [
+        "fit",
+        -0.0482
+      ],
+      [
+        "who",
+        -0.0452
+      ],
+      [
+        "we",
+        -0.045
+      ],
+      [
+        "preferably",
+        -0.0411
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "We have an immediate opening for a receptionist/admin with 1-2 years of experience preferably in the construction industry. We are looking for an individual who is energetic, enthusiastic and has great communication skills who will fit well in our office. Duties include answering the phone, scheduling, insurance requests, pre-liens &amp; releases, job numbers, entering purchase orders and other miscellaneous office duties. Spanish speaking is a plus. ",
+    "requirements": "nan",
+    "benefits": "nan",
+    "full_text_len": 531
+  },
+  {
+    "index": 1775,
+    "job_id": 17813,
+    "title": "Hiring for SAP Supply Chain Manager",
+    "location": "US, WA, Bellevue",
+    "department": "Unknown",
+    "employment_type": "Full-time",
+    "required_experience": "Mid-Senior level",
+    "required_education": "Unknown",
+    "industry": "Information Technology and Services",
+    "function": "Information Technology",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1857,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2304
+      ],
+      [
+        "full timejob",
+        0.094
+      ],
+      [
+        "timejob",
+        0.0917
+      ],
+      [
+        "supply",
+        0.0782
+      ],
+      [
+        "teams and",
+        0.0584
+      ],
+      [
+        "architecture for",
+        0.0583
+      ],
+      [
+        "to align",
+        0.057
+      ],
+      [
+        "type",
+        0.0565
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "relationships",
+        -0.0517
+      ],
+      [
+        "team",
+        -0.0477
+      ],
+      [
+        "solutions",
+        -0.0427
+      ],
+      [
+        "an",
+        -0.0362
+      ],
+      [
+        "sr",
+        -0.0345
+      ],
+      [
+        "partnerships",
+        -0.0324
+      ],
+      [
+        "and manage",
+        -0.0308
+      ],
+      [
+        "it",
+        -0.0299
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Position :Manager, Business Solutions-SAP/Supply ChainJob Type : Full TimeJob Location : United States-Washington\u2013BellevueUs work status required : EAD ,Green Card,US Citizens Job Requirements:Minimum of 6+ years in an Information Technology leadership role with the following:Experience in successfully developing and executing strategy for leading and operating SAP ERP systems and other Supply Chain systems.Track record of success in managing Supply Chain solutions in retail and/or wireless serv",
+    "requirements": "nan",
+    "benefits": "nan",
+    "full_text_len": 1745
+  },
+  {
+    "index": 1777,
+    "job_id": 17822,
+    "title": "Webcam Model",
+    "location": "Unknown",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 1,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1111,
+    "signals": {
+      "payment_request": true,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": true,
+      "urgency_language": true,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {
+      "payment_request": [
+        "- No payroll or payout fees of any kind, so you receive the amount you earn.",
+        "- The ability to earn commission for any new models you refer to us.Bonus Structure   Weekly Earnings Bonus Rate Bonus Pay Total Pay   $500 - $999 10% $50 - $99.90 $550 - $1,098.90   $1,000 - $1,999 20% $200 - $399.80 $1,200 - $2,398.80   $2,000 or more 30% $600 or more $2,600 or more    We never charge our models any fees, and do not ask for your credit card number at any time."
+      ],
+      "sensitive_data_request": [
+        "- Have a scanned image of a valid Driver's License, Passport, or other legal proof of age.",
+        "- The ability to earn commission for any new models you refer to us.Bonus Structure   Weekly Earnings Bonus Rate Bonus Pay Total Pay   $500 - $999 10% $50 - $99.90 $550 - $1,098.90   $1,000 - $1,999 20% $200 - $399.80 $1,200 - $2,398.80   $2,000 or more 30% $600 or more $2,600 or more    We never charge our models any fees, and do not ask for your credit card number at any time."
+      ],
+      "urgency_language": [
+        "- Start working immediately after your application is approved."
+      ]
+    },
+    "top_fraud_words": [
+      [
+        "earn",
+        0.191
+      ],
+      [
+        "company description",
+        0.163
+      ],
+      [
+        "money",
+        0.1242
+      ],
+      [
+        "earnings",
+        0.0942
+      ],
+      [
+        "no",
+        0.0901
+      ],
+      [
+        "000",
+        0.0848
+      ],
+      [
+        "internet",
+        0.0743
+      ],
+      [
+        "per",
+        0.0628
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "our",
+        -0.0584
+      ],
+      [
+        "private",
+        -0.0569
+      ],
+      [
+        "agency",
+        -0.0499
+      ],
+      [
+        "clients",
+        -0.0453
+      ],
+      [
+        "by",
+        -0.0427
+      ],
+      [
+        "one of",
+        -0.0396
+      ],
+      [
+        "search",
+        -0.0358
+      ],
+      [
+        "it",
+        -0.0358
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "Internet Modeling is a premier adult modeling agency recruiting and hiring webcam models for high paying webcam jobs.We are one of the oldest and most experienced online modeling agencies, representing webcam models since 1998. Our agency recruits for the largest network of adult websites such as #URL_7c618854292c1f4fe07b7bc848323c068e2d9c12d58c214d9120a1d491e9971c# and many others, with over five million visitors per day, so our cam models make the most money. We have many immediate webcam job ",
+    "requirements": "In order to be considered for a webcam model position, you MUST: - Be an attractive female or male over the age of 18 with a private place to work. - Be friendly, open minded, and feel comfortable in front of the camera. - Have a scanned image of a valid Driver's License, Passport, or other legal pr",
+    "benefits": "We provide the following benefits to all our webcam models:- Earn from $0.80/minute up to 70% of your gross earnings paid weekly with no minimums. - 70% lifetime revenue share paid weekly for recording or uploading videos for sale. - Weekly bonus of up to 30%, so if you make $2,000 your net pay woul",
+    "full_text_len": 3599
+  },
+  {
+    "index": 1778,
+    "job_id": 17830,
+    "title": "Android Developer",
+    "location": "PL, MZ, Warsaw",
+    "department": "Unknown",
+    "employment_type": "Unknown",
+    "required_experience": "Unknown",
+    "required_education": "Unknown",
+    "industry": "Unknown",
+    "function": "Unknown",
+    "has_company_logo": 0,
+    "has_questions": 0,
+    "telecommuting": 0,
+    "y_true": 1,
+    "pred": 0,
+    "fraud_score": 0.1967,
+    "signals": {
+      "payment_request": false,
+      "telegram_contact": false,
+      "whatsapp_contact": false,
+      "personal_email": false,
+      "sensitive_data_request": false,
+      "urgency_language": false,
+      "guaranteed_job": false,
+      "no_experience_required": false,
+      "crypto_request": false,
+      "suspicious_url": false
+    },
+    "evidence": {},
+    "top_fraud_words": [
+      [
+        "company description",
+        0.2529
+      ],
+      [
+        "box thinking",
+        0.083
+      ],
+      [
+        "mobile software",
+        0.0764
+      ],
+      [
+        "projects requirements",
+        0.0681
+      ],
+      [
+        "standards",
+        0.0556
+      ],
+      [
+        "phone",
+        0.0438
+      ],
+      [
+        "detail benefits",
+        0.0413
+      ],
+      [
+        "method",
+        0.0392
+      ]
+    ],
+    "top_legit_words": [
+      [
+        "mobile",
+        -0.088
+      ],
+      [
+        "software",
+        -0.0691
+      ],
+      [
+        "android",
+        -0.0645
+      ],
+      [
+        "english",
+        -0.0549
+      ],
+      [
+        "about",
+        -0.0538
+      ],
+      [
+        "of the",
+        -0.0466
+      ],
+      [
+        "new",
+        -0.0431
+      ],
+      [
+        "passionate",
+        -0.0382
+      ]
+    ],
+    "company_profile": "nan",
+    "description": "inFullMobile Sp. z o.o. is a mobile software development house, specializing in the client side of mobile software for clients all around the globe. We are a young company, where you can make the difference, the company structure is horizontal so everyone has a say. We are looking for the best of the best JAVA developers, some out of the box thinking, the courage to get involved with the bleeding edge technologies and projects.",
+    "requirements": "\u2022 A proven track record in Android / JAVA projects (C, C++, Obj-C is a plus)\u2022 Participation in specification and planning of new product modules and features,\u2022 A good knowledge of the English language (both written and spoken),\u2022 Out-of-the-box thinking and creativity (we care little about the at lin",
+    "benefits": "attractive salary (adequate to the candidate skillset) and benefit systemsposition in a company dynamically scaling in the area of new technology working on multiple international markets",
+    "full_text_len": 1665
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "JobShield AI",
+  "description": "Job scam detection system with DistilBERT sequence classification, rule-based heuristics, and adversarial robustness evaluation",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

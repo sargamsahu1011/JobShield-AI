@@ -1,9 +1,14 @@
 import re
 
+try:
+    from ml.text_normalizer import normalize_text
+except ImportError:
+    from text_normalizer import normalize_text
+
 
 def detect_scam_signals(text):
 
-    text_lower = text.lower()
+    text_lower = normalize_text(text).lower()
 
     signals = {}
 

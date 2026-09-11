@@ -73,6 +73,8 @@ if st.button("🔍 Analyze Job Posting", type="primary"):
     signals = result["signals"]
     evidence = result["evidence"]
     explanation = result["explanation"]
+    is_calibrated = result.get("is_calibrated", False)
+    model_name = result.get("model_name", "Classifier")
 
 
     # -----------------------------------------------------
@@ -85,10 +87,16 @@ if st.button("🔍 Analyze Job Posting", type="primary"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric(
-            "Fraud Score",
-            f"{fraud_score:.4f}"
-        )
+        if is_calibrated:
+            st.metric(
+                "Calibrated Fraud Probability",
+                f"{fraud_score:.2%}"
+            )
+        else:
+            st.metric(
+                "Uncalibrated Fraud Score",
+                f"{fraud_score:.4f}"
+            )
 
     with col2:
         if prediction == 1:
@@ -129,11 +137,17 @@ if st.button("🔍 Analyze Job Posting", type="primary"):
             "as legitimate."
         )
 
-    st.caption(
-        "Fraud Score is the model's raw score and is not a calibrated "
-        "probability. The prediction uses the trained classifier's "
-        "decision threshold."
-    )
+    if is_calibrated:
+        st.caption(
+            f"**Probability Semantics**: The probability above is calibrated using Platt scaling "
+            f"(sigmoid calibration on holdout validation data; Test Brier score: 0.0107, Test ECE: 0.0082). "
+            f"Model: {model_name}."
+        )
+    else:
+        st.caption(
+            "**Risk Score Semantics**: The score above is an uncalibrated raw model output and is "
+            "NOT a calibrated empirical probability. The prediction uses the classifier's decision threshold."
+        )
 
 
     # -----------------------------------------------------

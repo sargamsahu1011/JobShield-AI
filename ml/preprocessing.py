@@ -72,17 +72,34 @@ for column in categorical_columns:
     df[column] = df[column].fillna("Unknown")
 
 
+def serialize_job_posting(row) -> str:
+    """
+    Serialize job posting fields into labeled text for modeling.
+    Empty/NaN fields are omitted entirely so empty labeled headers
+    (e.g., 'COMPANY: DESCRIPTION:') are never emitted.
+    """
+    parts = []
+    field_labels = [
+        ("title", "TITLE:"),
+        ("company_profile", "COMPANY:"),
+        ("description", "DESCRIPTION:"),
+        ("requirements", "REQUIREMENTS:"),
+        ("benefits", "BENEFITS:"),
+    ]
+    for col, label in field_labels:
+        val = row.get(col, "")
+        if pd.notna(val):
+            val_str = str(val).strip()
+            if val_str and val_str.lower() != "nan" and val_str.lower() != "unknown":
+                parts.append(f"{label} {val_str}")
+    return " ".join(parts).strip()
+
+
 # ==============================
 # 5. CREATE COMBINED TEXT
 # ==============================
 
-df["combined_text"] = (
-    "TITLE: " + df["title"] +
-    " COMPANY: " + df["company_profile"] +
-    " DESCRIPTION: " + df["description"] +
-    " REQUIREMENTS: " + df["requirements"] +
-    " BENEFITS: " + df["benefits"]
-)
+df["combined_text"] = df.apply(serialize_job_posting, axis=1)
 
 
 # ==============================

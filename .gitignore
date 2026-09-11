@@ -10,3 +10,6 @@ data/processed/train.csv
 
 # Trained model
 models/jobshield-distilbert-final/
+
+# Generated audit reports
+reports/adversarial/*.json

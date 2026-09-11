@@ -1,5 +1,10 @@
 import re
 
+try:
+    from ml.text_normalizer import normalize_text
+except ImportError:
+    from text_normalizer import normalize_text
+
 
 SIGNAL_PATTERNS = {
     "payment_request": [
@@ -101,7 +106,7 @@ def extract_evidence(text):
             if not sentence:
                 continue
 
-            sentence_lower = sentence.lower()
+            sentence_lower = normalize_text(sentence).lower()
 
             if any(
                 re.search(pattern, sentence_lower)
