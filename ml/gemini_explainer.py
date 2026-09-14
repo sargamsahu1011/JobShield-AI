@@ -48,6 +48,18 @@ def _get_client():
     return _client
 
 
+def scan_prompt_injections(text: str) -> List[dict]:
+    """Scans any text for known adversarial prompt injection patterns."""
+    detected = []
+    for pattern, threat_type in INJECTION_PATTERNS:
+        for match in re.finditer(pattern, text):
+            detected.append({
+                "threat_type": threat_type,
+                "matched_text": match.group(0)
+            })
+    return detected
+
+
 def sanitize_evidence(evidence: Dict[str, List[str]]) -> Tuple[Dict[str, List[str]], List[dict]]:
     """
     Scans evidence sentences for prompt injection patterns.

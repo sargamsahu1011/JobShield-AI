@@ -13,6 +13,7 @@ from ml.adversarial.attack_generators import (
     AttackResult,
     AttackType,
 )
+from ml.adversarial.semantic_attacks import SemanticAttacker, SemanticAttackType
 from ml.scam_signals import detect_scam_signals
 
 
@@ -62,7 +63,8 @@ class EvaluationSummary:
     total_evaluations: int
     overall_asr: float
     overall_flips: int
-    overall_originally_fraudulent: int
+    overall_originally_fraudulent: int  # Distinct postings that were originally fraudulent (<= total_samples)
+    fraudulent_attack_evaluations: int  # Total attack opportunities across all attack types on fraudulent postings
     overall_pre_detection_rate: float
     overall_post_detection_rate: float
     overall_mean_score_drop: float
@@ -75,12 +77,35 @@ class EvaluationSummary:
 class AdversarialEvaluator:
     """Evaluates JobShield AI prediction robustness under controlled attacks."""
 
+    ALL_ATTACK_KEYS = [
+        AttackType.TYPOS.value,
+        AttackType.ZERO_WIDTH.value,
+        AttackType.HOMOGLYPHS.value,
+        AttackType.LEETSPEAK.value,
+        AttackType.OBFUSCATED_CONTACTS.value,
+        AttackType.OBFUSCATED_KEYWORDS.value,
+        AttackType.BENIGN_CAMOUFLAGE.value,
+        AttackType.SENTENCE_RESTRUCTURING.value,
+        SemanticAttackType.URGENCY_SYNONYMS,
+        SemanticAttackType.PARAPHRASED_SCAM,
+        SemanticAttackType.CASE_SPACING_TRICKS,
+    ]
+
     def __init__(
         self,
         predictor_fn: Optional[Callable[[str], Tuple[float, str]]] = None,
         model_name: str = "DistilBERT",
         seed: int = 42
     ):
+        self.model_name = model_name
+        self.attacker = AdversarialAttacker(seed=seed)
+        self.semantic_attacker = SemanticAttacker(seed=seed)
+        self.seed = seed
+
+        if predictor_fn is not None:
+            self.predictor_fn = predictor_fn
+        else:
+            self.predictor_fn = self._load_default_predictor()
         """
         Args:
             predictor_fn: A callable taking a text string and returning (fraud_score, prediction).
@@ -139,17 +164,31 @@ class AdversarialEvaluator:
         self,
         text: str,
         sample_id: str = "sample_0",
-        attack_types: Optional[List[AttackType]] = None
+        attack_types: Optional[List[Any]] = None
     ) -> List[AdversarialCaseEvaluation]:
         """Evaluates all or specified attacks against a single sample."""
         if attack_types is None:
-            attack_types = list(AttackType)
+            attack_keys = self.ALL_ATTACK_KEYS
+        else:
+            attack_keys = [a.value if hasattr(a, "value") else str(a) for a in attack_types]
 
         original_eval = self._evaluate_single_text(text)
         results: List[AdversarialCaseEvaluation] = []
 
-        for attack_type in attack_types:
-            attack_result = self.attacker.generate_attack(text, attack_type, seed=self.seed)
+        for key in attack_keys:
+            if key == SemanticAttackType.URGENCY_SYNONYMS:
+                attack_result = self.semantic_attacker.attack_urgency_synonyms(text, seed=self.seed)
+            elif key == SemanticAttackType.PARAPHRASED_SCAM:
+                attack_result = self.semantic_attacker.attack_paraphrase(text, seed=self.seed)
+            elif key == SemanticAttackType.CASE_SPACING_TRICKS:
+                attack_result = self.semantic_attacker.attack_case_spacing_tricks(text, seed=self.seed)
+            else:
+                try:
+                    atype = AttackType(key)
+                except ValueError:
+                    continue
+                attack_result = self.attacker.generate_attack(text, atype, seed=self.seed)
+
             attacked_eval = self._evaluate_single_text(attack_result.attacked_text)
 
             score_drop = original_eval.fraud_score - attacked_eval.fraud_score
@@ -167,7 +206,7 @@ class AdversarialEvaluator:
             results.append(
                 AdversarialCaseEvaluation(
                     sample_id=sample_id,
-                    attack_type=attack_type.value,
+                    attack_type=key,
                     original_text=text,
                     attacked_text=attack_result.attacked_text,
                     mutation_metadata=attack_result.mutation_metadata,
@@ -185,7 +224,7 @@ class AdversarialEvaluator:
     def evaluate_dataset(
         self,
         samples: List[Dict[str, Any]],
-        attack_types: Optional[List[AttackType]] = None
+        attack_types: Optional[List[Any]] = None
     ) -> EvaluationSummary:
         """
         Runs evaluation on a collection of job postings.
@@ -250,16 +289,26 @@ class AdversarialEvaluator:
 
         # Overall metrics
         total_evals = len(cases)
-        total_orig_fraud = sum(1 for c in cases if c.original_eval.prediction == "Fraudulent")
+        # Distinct input samples:
+        sample_preds = {}
+        for c in cases:
+            if c.sample_id not in sample_preds:
+                sample_preds[c.sample_id] = c.original_eval.prediction
+
+        unique_sample_count = len(sample_preds)
+        distinct_orig_fraud = sum(1 for p in sample_preds.values() if p == "Fraudulent")
+
+        # Fraudulent attack cases (total opportunities across all attacks):
+        fraud_cases_count = sum(1 for c in cases if c.original_eval.prediction == "Fraudulent")
         total_flips = sum(1 for c in cases if c.flipped)
-        overall_asr = (total_flips / total_orig_fraud) if total_orig_fraud > 0 else 0.0
+        overall_asr = (total_flips / fraud_cases_count) if fraud_cases_count > 0 else 0.0
 
         all_drops = [c.score_drop for c in cases]
         overall_mean_drop = sum(all_drops) / len(all_drops) if all_drops else 0.0
         overall_max_drop = max(all_drops) if all_drops else 0.0
 
         total_post_fraud = sum(1 for c in cases if c.attacked_eval.prediction == "Fraudulent")
-        overall_pre_det = (total_orig_fraud / total_evals) if total_evals > 0 else 0.0
+        overall_pre_det = (fraud_cases_count / total_evals) if total_evals > 0 else 0.0
         overall_post_det = (total_post_fraud / total_evals) if total_evals > 0 else 0.0
 
         total_orig_sigs = sum(len(c.original_eval.active_signals) for c in cases)
@@ -268,15 +317,14 @@ class AdversarialEvaluator:
             (total_drop_sigs / total_orig_sigs) if total_orig_sigs > 0 else 0.0
         )
 
-        unique_sample_ids = len(set(c.sample_id for c in cases))
-
         return EvaluationSummary(
             model_name=self.model_name,
-            total_samples=unique_sample_ids,
+            total_samples=unique_sample_count,
             total_evaluations=total_evals,
             overall_asr=round(overall_asr, 4),
             overall_flips=total_flips,
-            overall_originally_fraudulent=total_orig_fraud,
+            overall_originally_fraudulent=distinct_orig_fraud,
+            fraudulent_attack_evaluations=fraud_cases_count,
             overall_pre_detection_rate=round(overall_pre_det, 4),
             overall_post_detection_rate=round(overall_post_det, 4),
             overall_mean_score_drop=round(overall_mean_drop, 4),

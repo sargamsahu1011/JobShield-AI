@@ -85,7 +85,22 @@ def validate_and_sanitize_input(raw_input: any) -> Tuple[str, dict]:
     sanitized = re.sub(r"\n{3,}", "\n\n", sanitized)
     sanitized = sanitized.strip()
 
-    # 5. Empty and minimum length check
+    # 5. XSS Defusal / Dangerous HTML sanitization
+    has_xss = False
+    if (
+        re.search(r"(?i)<(script|iframe|object|embed|style)[^>]*>", sanitized)
+        or re.search(r"(?i)on(error|load|click|mouseover|focus)\s*=", sanitized)
+        or re.search(r"(?i)javascript\s*:", sanitized)
+    ):
+        has_xss = True
+        sanitized = re.sub(r"(?i)<(script|iframe|object|embed|style)[^>]*>.*?</\1>", "[DEFUSED_SCRIPT_BLOCK]", sanitized, flags=re.DOTALL)
+        sanitized = re.sub(r"(?i)<(script|iframe|object|embed|style)[^>]*>", "[DEFUSED_TAG]", sanitized)
+        sanitized = re.sub(r"(?i)on(error|load|click|mouseover|focus)\s*=", "data-defused-event=", sanitized)
+        sanitized = re.sub(r"(?i)javascript\s*:", "defused_script:", sanitized)
+
+    meta["sanitized_xss"] = has_xss
+
+    # 6. Empty and minimum length check
     if not sanitized:
         raise InputValidationError("Job posting cannot be empty or whitespace-only.")
 

@@ -228,7 +228,7 @@ def main():
         seed=args.seed
     )
 
-    print(f"[*] Executing 8 adversarial attack generators on each sample (Seed: {args.seed})...")
+    print(f"[*] Executing {len(evaluator.ALL_ATTACK_KEYS)} adversarial attack generators on each sample (Seed: {args.seed})...")
     summary = evaluator.evaluate_dataset(samples)
 
     # 4. Generate Reports
@@ -241,8 +241,9 @@ def main():
     print(f"                ADVERSARIAL EVALUATION SUMMARY ({summary.model_name})")
     print("=" * 70)
     print(f"Total Postings Evaluated:         {summary.total_samples}")
+    print(f"Postings Originally Fraudulent:   {summary.overall_originally_fraudulent} (out of {summary.total_samples} evaluated)")
     print(f"Total Attack Variants Generated:  {summary.total_evaluations}")
-    print(f"Originally Fraudulent Postings:   {summary.overall_originally_fraudulent}")
+    print(f"Fraudulent Attack Opportunities:  {summary.fraudulent_attack_evaluations}")
     print(f"Evaded Classifications (Flips):   {summary.overall_flips}")
     print(f"Overall Attack Success Rate:      {summary.overall_asr * 100:.2f}%")
     print(f"Pre-Attack Fraud Detection Rate:  {summary.overall_pre_detection_rate * 100:.2f}%")

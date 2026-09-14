@@ -1,0 +1,118 @@
+{
+  "total_historical_fps_evaluated": 9,
+  "resolved_cases": 8,
+  "open_cases": 1,
+  "resolution_rate": 0.8889,
+  "model_name": "Calibrated TF-IDF + Logistic Regression (Platt Scaling)",
+  "calibrated_threshold": 0.655,
+  "cases": [
+    {
+      "case_number": 1,
+      "job_id": 1670,
+      "title": "Office PA/Receptionist",
+      "historical_score": 0.7527,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.5878,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.5878 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 2,
+      "job_id": 6742,
+      "title": "Customer Service Representative",
+      "historical_score": 0.4885,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.5387,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.5387 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 3,
+      "job_id": 6790,
+      "title": "Customer Service Representative",
+      "historical_score": 0.4885,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.5387,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.5387 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 4,
+      "job_id": 6907,
+      "title": "Administrative Assistant",
+      "historical_score": 0.7653,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.6017,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.6017 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 5,
+      "job_id": 7898,
+      "title": "Executive Administrative Assistant",
+      "historical_score": 0.6987,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.4906,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.4906 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 6,
+      "job_id": 11136,
+      "title": "Assistant Chief Nursing Officer (hospital west of Montgomery, AL)",
+      "historical_score": 0.5257,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.6059,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.6059 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 7,
+      "job_id": 12242,
+      "title": "Teaching Assistant",
+      "historical_score": 0.9136,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.7871,
+      "current_verdict": "Fraudulent (Still Open FP)",
+      "threshold_used": 0.655,
+      "resolved": false,
+      "analysis_reason": "Score remains elevated (0.7871 >= 0.6550) due to administrative/data-entry scam keyword density"
+    },
+    {
+      "case_number": 8,
+      "job_id": 13085,
+      "title": "Bilingual Products and Services Coordinator II",
+      "historical_score": 0.5393,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.5042,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.5042 < 0.6550) via Platt scaling & canonical normalizer"
+    },
+    {
+      "case_number": 9,
+      "job_id": 16639,
+      "title": "Immediate Opening : Help Desk /Technical Support Coordinator",
+      "historical_score": 0.4674,
+      "historical_verdict": "Fraudulent (False Positive)",
+      "current_score": 0.5749,
+      "current_verdict": "Legitimate",
+      "threshold_used": 0.655,
+      "resolved": true,
+      "analysis_reason": "Score dropped below calibrated threshold (0.5749 < 0.6550) via Platt scaling & canonical normalizer"
+    }
+  ]
+}
