@@ -1,0 +1,25 @@
+test_row_index,job_id,title,true_label,predicted_label,probability,error_type,category,text_length,word_count,detected_signals,rationale
+170,1747,Data Entry,0,1,0.9634,FP,ambiguous_legitimate,1859,232,high_income,Legitimate clerical/data entry posting with high keyword overlap with typical administrative scams.
+445,4521,Data Entry,0,1,0.9634,FP,ambiguous_legitimate,1859,232,high_income,Legitimate clerical/data entry posting with high keyword overlap with typical administrative scams.
+1424,14666,Payroll  Clerk $20/hr,0,1,0.9831,FP,ambiguous_legitimate,1400,207,bank_account_info; work_from_home,Legitimate clerical/data entry posting with high keyword overlap with typical administrative scams.
+49,538,Technology Consultant - Outside Sales  ,1,0,0.0132,FN,missing_scam_signals,2191,241,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+180,1879,KMC ,1,0,0.0048,FN,short_posting,451,82,none,"Extremely brief job posting (82 words, 451 chars) lacking sufficient TF-IDF feature density."
+472,4762,COMPANY REPRESENTATIVE NEEDED,1,0,0.0885,FN,short_posting,543,76,payment_fee,"Extremely brief job posting (76 words, 543 chars) lacking sufficient TF-IDF feature density."
+546,5500,Brand Partner,1,0,0.3645,FN,short_posting,508,76,none,"Extremely brief job posting (76 words, 508 chars) lacking sufficient TF-IDF feature density."
+598,5871,Receptionist Office Asst.,1,0,0.0448,FN,insufficient_evidence,1408,178,urgency; high_income,General administrative/sales vacancy with low fraud confidence (0.0448) and weak feature support.
+621,6145,Physician Assistant PA Dermatology   1843,1,0,0.4928,FN,missing_scam_signals,887,121,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+639,6364,Integration Engineer with HL7 & EMR.,1,0,0.016,FN,missing_scam_signals,2705,330,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+838,8421,Lead Business Analyst,1,0,0.0008,FN,missing_scam_signals,2715,363,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+1610,16803,QA Compliance Specialist ,1,0,0.3384,FN,missing_scam_signals,2308,281,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+1687,17520,Director of Perioperative Services  ,1,0,0.0806,FN,semantic_paraphrase,3625,461,payment_fee,Scam disguised as professional job with subtle indicators (payment_fee) that TF-IDF missed.
+1697,17568,Trainer/Recuiter Specialist,1,0,0.056,FN,short_posting,281,37,none,"Extremely brief job posting (37 words, 281 chars) lacking sufficient TF-IDF feature density."
+1702,17628,Web Developer  ,1,0,0.0189,FN,missing_scam_signals,1670,191,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.
+1705,17659,Quality Manager Automated Manufacturing   2141,1,0,0.1,FN,semantic_paraphrase,5659,733,payment_fee,Scam disguised as professional job with subtle indicators (payment_fee) that TF-IDF missed.
+1709,17689,User Experience Designer | Mobile,1,0,0.009,FN,semantic_paraphrase,1139,149,payment_fee,Scam disguised as professional job with subtle indicators (payment_fee) that TF-IDF missed.
+1710,17697,MONEY MOTIVATED outside sales reps,1,0,0.1084,FN,insufficient_evidence,1241,192,bank_account_info,General administrative/sales vacancy with low fraud confidence (0.1084) and weak feature support.
+1719,17773,Sales professionals,1,0,0.3686,FN,short_posting,607,82,none,"Extremely brief job posting (82 words, 607 chars) lacking sufficient TF-IDF feature density."
+1720,17774,Receptionist/ Admin,1,0,0.1567,FN,short_posting,494,70,none,"Extremely brief job posting (70 words, 494 chars) lacking sufficient TF-IDF feature density."
+1725,17806,Receptionist,1,0,0.3913,FN,unusual_wording,620,96,none,Foreign or unconventional phrasing in hotel/receptionist vacancy bypassing standard scam n-grams.
+1728,17822,Webcam Model,1,0,0.0409,FN,unusual_wording,3589,601,payment_fee; bank_account_info; urgency; suspicious_contact,Adult entertainment / non-traditional recruitment posting with domain-specific terms not captured in training vocabulary.
+1729,17824,Sales Person Required,1,0,0.0032,FN,insufficient_evidence,2056,334,high_income,General administrative/sales vacancy with low fraud confidence (0.0032) and weak feature support.
+1730,17830,Android Developer,1,0,0.1543,FN,missing_scam_signals,1655,255,none,Sophisticated corporate clone mimicking genuine corporate job description; lacks overt scam vocabulary.

@@ -24,16 +24,19 @@ _client = None
 # Regex patterns for identifying prompt injection attempts inside extracted evidence
 INJECTION_PATTERNS = [
     (r"(?i)ignore\s+(all\s+)?previous\s+instructions", "Direct Instruction Override"),
-    (r"(?i)disregard\s+(all\s+)?(previous\s+)?(instructions|rules|signals|warnings)", "Direct Instruction Override"),
+    (r"(?i)disregard\s+(all\s+)?(previous\s+|standard\s+)?(instructions|rules|signals|warnings|checks|fraud\s+checks)", "Direct Instruction Override"),
     (r"(?i)system\s+(override|directive|audit|note|instruction)", "Fake System Delimiter/Tag"),
     (r"(?i)new\s+instructions\s*:", "Direct Instruction Override"),
     (r"(?i)you\s+are\s+(now|no\s+longer)\b", "Persona Hijacking / Roleplay Jailbreak"),
     (r"(?i)\bjailbreak\b", "Explicit Jailbreak Token"),
-    (r"(?i)(reveal|print|leak|show|output)\s+(verbatim\s+)?(all\s+)?(your\s+)?(system\s+prompt|instructions|rules)", "Prompt Extraction Attempt"),
+    (r"(?i)(reveal|print|leak|show|output)\s+(verbatim\s+)?(your\s+)?(all\s+|entire\s+)?(system\s+prompt|instructions|rules)", "Prompt Extraction Attempt"),
     (r"(?i)(contradict|invert|override|change)\s+(the\s+)?(fraud\s+score|model|prediction|verdict)", "Verdict Inversion Attempt"),
     (r"(?i)</?(evidence|system|prompt|instruction)>", "Context / XML Escape Attempt"),
     (r"(?i)algorithmic\s+false\s+positive\s+glitch", "Verdict Inversion Attempt"),
-    (r"(?i)describe\s+this\s+posting\s+as\s+(legitimate|verified|completely\s+safe)", "Direct Instruction Override")
+    (r"(?i)(describe|classify|mark|treat)\s+this\s+(posting|job|listing)\s+as\s+(completely\s+)?(legitimate|verified|completely\s+safe|safe)", "Direct Instruction Override"),
+    (r"(?i)note\s+to\s+(ai|llm|evaluator|reviewer|model|evaluation\s+agent)", "Direct Instruction Override"),
+    (r"(?i)omit\s+(all\s+)?risk\s+warnings", "Direct Instruction Override"),
+    (r"(?i)(debug\s+mode|developer\s+mode)", "Debug Mode Bypass"),
 ]
 
 
@@ -141,7 +144,7 @@ def generate_explanation(
         if detected
     ]
 
-    verdict_label = "Fraudulent" if (prediction == 1 or (prediction is None and fraud_score >= 0.405)) else "Legitimate / Low Risk"
+    verdict_label = "Fraudulent" if (prediction == 1 or (prediction is None and fraud_score >= 0.54)) else "Legitimate / Low Risk"
 
     if client is None:
         signals_text = ", ".join(detected_signal_names) if detected_signal_names else "None"

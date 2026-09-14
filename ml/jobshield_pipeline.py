@@ -1,4 +1,4 @@
-from ml.predict import predict_job, IS_CALIBRATED, MODEL_NAME
+from ml.predict import predict_job, IS_CALIBRATED, MODEL_NAME, THRESHOLD
 from ml.scam_signals import detect_scam_signals
 from ml.evidence_extractor import extract_evidence
 from ml.gemini_explainer import generate_explanation, scan_prompt_injections
@@ -74,6 +74,7 @@ def analyze_job(text: any, include_explanation: bool = True) -> dict:
         "evidence": evidence,
         "explanation": explanation,
         "is_calibrated": IS_CALIBRATED,
+        "threshold": THRESHOLD,
         "model_name": MODEL_NAME,
         "signal_veto_triggered": signal_veto_triggered,
         "input_validation": validation_meta,

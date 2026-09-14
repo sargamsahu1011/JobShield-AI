@@ -1,0 +1,21 @@
+# Core Machine Learning & Data Processing
+scikit-learn==1.9.0
+joblib==1.6.0
+pandas==3.0.5
+numpy==2.5.2
+scipy==1.18.1
+
+# Deep Learning & Transformers (Fallback & Inspection)
+torch==2.14.0
+transformers==5.16.1
+
+# Generative AI & Explanation Layer
+google-genai==2.22.0
+python-dotenv==1.2.3
+
+# Visualization & Metrics
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# User Interface
+streamlit==1.63.0

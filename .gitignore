@@ -7,9 +7,18 @@ __pycache__/
 # Large datasets
 data/processed/jobshield_clean.csv
 data/processed/train.csv
+data/raw/
+data/processed/train_adversarial.csv
 
 # Trained model
 models/jobshield-distilbert-final/
 
 # Generated audit reports
 reports/adversarial/*.json
+
+# Evaluation outputs not required for deployment
+models/*_test_predictions.csv
+
+# Experimental adversarial model artifacts
+models/adversarial_*.joblib
+models/adversarial_*.json

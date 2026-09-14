@@ -17,6 +17,17 @@ def detect_scam_signals(text):
         r"registration fee",
         r"processing fee",
         r"application fee",
+        r"background check fee",
+        r"verification fee",
+        r"refundable fee",
+        r"refundable(?:\s+\w+)?\s+fee",
+        r"onboarding fee",
+        r"security fee",
+        r"membership fee",
+        r"training fee",
+        r"upfront fee",
+        r"fee\s+(?:is\s+)?required",
+        r"payment\s+(?:is\s+)?required",
         r"pay.*fee",
         r"payment.*required",
         r"deposit.*money",
@@ -50,6 +61,8 @@ def detect_scam_signals(text):
     sensitive_patterns = [
         r"bank account",
         r"bank details",
+        r"banking details",
+        r"routing number",
         r"credit card",
         r"debit card",
         r"otp",
@@ -72,7 +85,16 @@ def detect_scam_signals(text):
         r"limited seats",
         r"act now",
         r"last chance",
-        r"join today"
+        r"join today",
+        r"apply today",
+        r"register today",
+        r"registration today",
+        r"today only",
+        r"right away",
+        r"within (?:24|48)\s*hours?",
+        r"act quickly",
+        r"(?:complete|secure).*\btoday\b",
+        r"\btoday\b.*(?:to secure|deadline|hurry)"
     ]
 
     signals["urgency_language"] = any(
@@ -97,7 +119,7 @@ def detect_scam_signals(text):
     # 8. No experience
     signals["no_experience_required"] = bool(
         re.search(
-            r"no experience required|no experience needed|anyone can apply",
+            r"no\s+(?:prior\s+)?experience\s+(?:required|needed)|anyone can apply",
             text_lower
         )
     )

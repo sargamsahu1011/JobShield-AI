@@ -8,26 +8,30 @@ from ml.jobshield_pipeline import analyze_job
 # ---------------------------------------------------------
 
 st.set_page_config(
-    page_title="JobShield AI",
+    page_title="JobShield AI — Recruitment Scam Detection",
     page_icon="🛡️",
     layout="wide"
 )
 
 
 # ---------------------------------------------------------
-# Header
+# Header & Purpose
 # ---------------------------------------------------------
 
 st.title("🛡️ JobShield AI")
 
 st.markdown(
     """
-    **Evidence-Grounded Recruitment Scam Detection**
+    **Evidence-Grounded Recruitment Scam Detection & Decision-Support System**
 
-    Analyze a job posting for potential recruitment scam indicators
-    using machine learning, rule-based evidence extraction, and
-    evidence-grounded AI explanations.
+    Screen job postings for deceptive recruitment practices using calibrated machine learning,
+    rule-based evidence extraction, and evidence-grounded AI explanations.
     """
+)
+
+st.info(
+    "⚠️ **Decision-Support Notice**: JobShield AI provides probabilistic risk indicators to assist human review. "
+    "Predictions are not definitive proof of fraud or legitimacy. Always conduct independent employer verification."
 )
 
 st.divider()
@@ -37,36 +41,38 @@ st.divider()
 # Input
 # ---------------------------------------------------------
 
-st.subheader("Analyze a Job Posting")
+st.subheader("1. Job Posting Input")
 
 job_text = st.text_area(
-    "Paste the complete job posting below",
-    height=350,
+    "Paste the complete job posting text below (Title, Company, Description, Requirements, Benefits, Contact):",
+    height=300,
     placeholder=(
-        "Paste the job title, company information, description, "
-        "requirements, benefits, contact information, etc."
+        "Paste the job posting content here...\n\n"
+        "Example:\n"
+        "Title: Remote Data Entry Assistant\n"
+        "Company: Example Corp\n"
+        "Description: Earn $4000/week from home. No experience needed. Pay $100 registration fee to begin.\n"
+        "Contact: Reach recruiter on Telegram @example_hire"
     )
 )
 
 
 # ---------------------------------------------------------
-# Analysis
+# Analysis Action
 # ---------------------------------------------------------
 
-if st.button("🔍 Analyze Job Posting", type="primary"):
+if st.button("🔍 Analyze Job Posting", type="primary", use_container_width=True):
 
     if not job_text.strip():
         st.warning("Please paste a job posting before analyzing.")
         st.stop()
 
-    with st.spinner("Analyzing job posting..."):
+    with st.spinner("Screening job posting through calibrated ML pipeline and evidence extraction..."):
         try:
             result = analyze_job(job_text)
-
         except Exception as e:
             st.error(f"Analysis failed: {e}")
             st.stop()
-
 
     fraud_score = result["fraud_score"]
     prediction = result["prediction"]
@@ -74,88 +80,79 @@ if st.button("🔍 Analyze Job Posting", type="primary"):
     evidence = result["evidence"]
     explanation = result["explanation"]
     is_calibrated = result.get("is_calibrated", False)
-    model_name = result.get("model_name", "Classifier")
-
+    threshold = result.get("threshold", 0.54)
+    model_name = result.get("model_name", "Calibrated Classifier")
 
     # -----------------------------------------------------
-    # Prediction
+    # Analysis Metrics
     # -----------------------------------------------------
 
     st.divider()
-    st.subheader("Analysis Result")
+    st.subheader("2. Risk Assessment & Prediction")
 
-    col1, col2, col3 = st.columns(3)
+    m_col1, m_col2, m_col3, m_col4 = st.columns(4)
 
-    with col1:
+    with m_col1:
         if is_calibrated:
             st.metric(
-                "Calibrated Fraud Probability",
-                f"{fraud_score:.2%}"
+                label="Risk Probability",
+                value=f"{fraud_score:.2%}",
+                help="Empirically calibrated probability of fraud via Platt scaling"
             )
         else:
             st.metric(
-                "Uncalibrated Fraud Score",
-                f"{fraud_score:.4f}"
+                label="Risk Score (Uncalibrated)",
+                value=f"{fraud_score:.4f}",
+                help="Raw model output score"
             )
 
-    with col2:
+    with m_col2:
         if prediction == 1:
             st.metric(
-                "Prediction",
-                "Fraudulent"
+                label="Prediction Verdict",
+                value="HIGH RISK / FRAUDULENT"
             )
         else:
             st.metric(
-                "Prediction",
-                "Legitimate"
+                label="Prediction Verdict",
+                value="LOW RISK / LIKELY LEGITIMATE"
             )
 
-    with col3:
-        detected_count = sum(
-            1 for detected in signals.values()
-            if detected
-        )
-
+    with m_col3:
         st.metric(
-            "Scam Signals",
-            detected_count
+            label="Threshold Used",
+            value=f"{threshold:.2%}",
+            help="Decision boundary selected on validation split for optimal F1"
         )
 
+    with m_col4:
+        st.metric(
+            label="Probability Calibrated",
+            value="Yes (Platt Scaling)" if is_calibrated else "No (Raw Score)",
+            help="Platt scaling fitted on holdout validation data"
+        )
 
     # -----------------------------------------------------
-    # Risk indication
+    # Risk Indication Banner
     # -----------------------------------------------------
 
     if prediction == 1:
         st.error(
-            "⚠️ HIGH RISK — The classifier predicts this posting "
-            "as fraudulent."
+            f"⚠️ **HIGH RISK / FRAUDULENT**: This job posting has been flagged with an elevated fraud probability "
+            f"({fraud_score:.2%}) meeting or exceeding the production decision threshold of {threshold:.2%}."
         )
     else:
         st.success(
-            "✓ LOWER RISK — The classifier predicts this posting "
-            "as legitimate."
+            f"✅ **LOW RISK / LIKELY LEGITIMATE**: The model predicts this posting is below the fraud threshold "
+            f"({fraud_score:.2%} < {threshold:.2%}). No critical scam patterns were triggered."
         )
-
-    if is_calibrated:
-        st.caption(
-            f"**Probability Semantics**: The probability above is calibrated using Platt scaling "
-            f"(sigmoid calibration on holdout validation data; Test Brier score: 0.0107, Test ECE: 0.0082). "
-            f"Model: {model_name}."
-        )
-    else:
-        st.caption(
-            "**Risk Score Semantics**: The score above is an uncalibrated raw model output and is "
-            "NOT a calibrated empirical probability. The prediction uses the classifier's decision threshold."
-        )
-
 
     # -----------------------------------------------------
-    # Detected signals
+    # Detected Signals
     # -----------------------------------------------------
 
     st.divider()
-    st.subheader("🚩 Detected Scam Signals")
+    st.subheader("3. Detected Scam Signals & Indicators")
 
     detected_signals = [
         signal.replace("_", " ").title()
@@ -164,74 +161,67 @@ if st.button("🔍 Analyze Job Posting", type="primary"):
     ]
 
     if detected_signals:
-        for signal in detected_signals:
-            st.warning(f"• {signal}")
+        st.write(f"The rule-ensemble detected **{len(detected_signals)}** potential risk indicator(s):")
+        cols = st.columns(min(len(detected_signals), 3))
+        for idx, signal in enumerate(detected_signals):
+            with cols[idx % len(cols)]:
+                st.warning(f"🚩 **{signal}**")
     else:
-        st.success("No predefined scam signals were detected.")
-
+        st.success("✓ No explicit heuristic scam signals (fees, personal messengers, sensitive data requests) detected.")
 
     # -----------------------------------------------------
-    # Evidence
+    # Extracted Evidence
     # -----------------------------------------------------
 
     st.divider()
-    st.subheader("🔎 Evidence Extracted from the Job Posting")
+    st.subheader("4. Extracted Evidence from Posting")
 
     if evidence:
-
-        for signal, sentences in evidence.items():
-
-            st.markdown(
-                f"**{signal.replace('_', ' ').title()}**"
-            )
-
+        for signal_key, sentences in evidence.items():
+            st.markdown(f"**Evidence for {signal_key.replace('_', ' ').title()}**:")
             for sentence in sentences:
-                st.info(f'“{sentence}”')
-
+                st.info(f"“{sentence}”")
     else:
-        st.info(
-            "No specific evidence snippets were extracted."
-        )
-
+        st.caption("No specific verbatim risk sentences were isolated for extraction.")
 
     # -----------------------------------------------------
-    # Gemini explanation
+    # AI Explanation
     # -----------------------------------------------------
 
     st.divider()
-    st.subheader("🤖 AI Explanation")
+    st.subheader("5. AI Explanation & Safety Guidance")
 
     if explanation:
         st.markdown(explanation)
     else:
-        st.info("No explanation was generated.")
-
+        st.caption("AI explanation not available.")
 
     # -----------------------------------------------------
-    # Safety recommendation
+    # Safety Recommendations
     # -----------------------------------------------------
 
     st.divider()
-    st.subheader("🛡️ Safety Reminder")
+    st.subheader("6. Job Seeker Safety Guidelines")
 
     st.markdown(
         """
-        - Never pay a registration, processing, or application fee to obtain a job.
-        - Do not share passwords, OTPs, banking credentials, or unnecessary identity information.
-        - Verify the company and job posting through trusted official sources.
-        - Treat this result as decision-support, not as definitive proof that a job is fraudulent.
+        - **Never Pay to Work:** Legitimate employers never charge application, registration, processing, or background-check fees.
+        - **Keep Communications Official:** Beware of employers insisting on Telegram, WhatsApp, or personal Gmail accounts.
+        - **Protect Identity & Finances:** Never provide bank account details, credit cards, or Social Security / ID numbers prior to formal written employment offers.
+        - **Verify Independently:** Check the employer's official website, verifiable phone directory, and registered domain.
         """
     )
 
 
 # ---------------------------------------------------------
-# Disclaimer
+# Footer & Legal Disclaimer
 # ---------------------------------------------------------
 
 st.divider()
 
 st.caption(
-    "JobShield AI is a research and decision-support system. "
-    "Predictions may contain false positives or false negatives. "
-    "Always independently verify employers and job opportunities."
+    "**JobShield AI Decision-Support Disclaimer**: This tool is an automated decision-support aid based on linguistic "
+    "patterns and machine learning models trained on the EMSCAD benchmark dataset. It does NOT guarantee 100% scam detection "
+    "accuracy (current test recall: 80.37%) and is NOT a legal determination of fraud. Users and organizations must conduct independent "
+    "verification before making employment or platform enforcement decisions."
 )

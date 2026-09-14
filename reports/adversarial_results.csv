@@ -1,0 +1,10 @@
+id,category,probability,prediction,correct
+clean_scam,baseline,0.9823878687806544,1,True
+character_substitution,obfuscation,0.9823878687806544,1,True
+punctuation_obfuscation,obfuscation,0.9823878687806544,1,True
+spacing_obfuscation,obfuscation,0.9823878687806544,1,True
+case_manipulation,case,0.9823878687806544,1,True
+sentence_splitting,sentence_split,0.5479306861675723,1,True
+synonym_substitution,synonym,0.44560924058812273,0,False
+urgency_paraphrase,paraphrase,0.045479115192858806,0,False
+heavy_paraphrase,paraphrase,0.040455834663835406,0,False
