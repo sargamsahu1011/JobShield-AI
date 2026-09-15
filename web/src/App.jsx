@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "./App.css";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "";
 
 function App() {
   const [jobText, setJobText] = useState("");

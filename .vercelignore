@@ -1,0 +1,8 @@
+models/
+data/
+archive/
+notebooks/
+reports/
+.venv/
+__pycache__/
+*.pyc
