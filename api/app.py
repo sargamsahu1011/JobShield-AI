@@ -14,7 +14,14 @@ from ml.input_validator import InputValidationError
 
 app = Flask(__name__)
 CORS(app)
-
+@app.get("/")
+def root():
+    return jsonify({
+        "status": "ok",
+        "service": "JobShield AI API",
+        "health": "/api/health",
+        "analyze": "/api/analyze"
+    })
 
 @app.get("/api/health")
 def health():
