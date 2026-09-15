@@ -31,14 +31,37 @@ function App() {
         }),
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get("content-type") || "";
 
       if (!response.ok) {
-        throw new Error(data.error || "Analysis failed.");
+        const errorText = await response.text();
+
+        let message = errorText;
+
+        try {
+          const errorData = JSON.parse(errorText);
+          message = errorData.error || errorText;
+        } catch {
+          // Response was not JSON
+        }
+
+        throw new Error(`API error (${response.status}): ${message}`);
       }
+
+      if (!contentType.includes("application/json")) {
+        const responseText = await response.text();
+
+        throw new Error(
+          `API returned non-JSON response: ${responseText}`
+        );
+      }
+
+      const data = await response.json();
 
       setResult(data);
     } catch (err) {
+      console.error("JobShield API error:", err);
+
       setError(
         err.message ||
           "Unable to connect to the JobShield AI backend."
@@ -49,16 +72,27 @@ function App() {
   };
 
   const probability = result
-    ? (result.fraud_score * 100).toFixed(2)
+    ? (Number(result.fraud_score || 0) * 100).toFixed(2)
     : null;
 
-  const isFraud = result?.prediction === 1 || result?.fraud_score >= result?.threshold;
+  const threshold = result
+    ? Number(result.threshold || 0.54)
+    : 0.54;
+
+  const isFraud =
+    result?.prediction === 1 ||
+    Number(result?.fraud_score || 0) >= threshold;
+
+  const signalEntries = Object.entries(result?.signals || {}).filter(
+    ([, value]) => Boolean(value)
+  );
 
   return (
     <div className="app">
       <header className="navbar">
         <div className="brand">
           <div className="brand-icon">🛡️</div>
+
           <div>
             <h1>JobShield AI</h1>
             <span>AI-Powered Job Scam Detection</span>
@@ -102,12 +136,12 @@ function App() {
           <textarea
             value={jobText}
             onChange={(e) => setJobText(e.target.value)}
-            placeholder="Paste a job posting here...
+            placeholder={`Paste a job posting here...
 
 Example:
 We are hiring a Data Entry Executive.
 No experience required. Work from home.
-A refundable registration fee is required before onboarding..."
+A refundable registration fee is required before onboarding...`}
           />
 
           <div className="action-row">
@@ -139,7 +173,11 @@ A refundable registration fee is required before onboarding..."
                 <h2>Risk Assessment</h2>
               </div>
 
-              <div className={`verdict ${isFraud ? "danger" : "safe"}`}>
+              <div
+                className={`verdict ${
+                  isFraud ? "danger" : "safe"
+                }`}
+              >
                 {isFraud ? "HIGH RISK" : "LOW RISK"}
               </div>
             </div>
@@ -156,22 +194,27 @@ A refundable registration fee is required before onboarding..."
                       isFraud ? "danger-fill" : "safe-fill"
                     }`}
                     style={{
-                      width: `${Math.min(Number(probability), 100)}%`,
+                      width: `${Math.min(
+                        Number(probability),
+                        100
+                      )}%`,
                     }}
                   ></div>
                 </div>
 
                 <p>
                   Production threshold:{" "}
-                  {(result.threshold * 100).toFixed(2)}%
+                  {(threshold * 100).toFixed(2)}%
                 </p>
               </div>
 
               <div className="risk-card">
                 <span>Model</span>
+
                 <strong className="small-value">
                   Calibrated ML
                 </strong>
+
                 <p>
                   {result.is_calibrated
                     ? "Platt calibrated probability"
@@ -181,10 +224,14 @@ A refundable registration fee is required before onboarding..."
 
               <div className="risk-card">
                 <span>Detection Engine</span>
+
                 <strong className="small-value">
                   Production
                 </strong>
-                <p>{result.model_name}</p>
+
+                <p>
+                  {result.model_name || "TF-IDF + Logistic Regression"}
+                </p>
               </div>
             </div>
 
@@ -195,19 +242,17 @@ A refundable registration fee is required before onboarding..."
               </div>
 
               <div className="signals">
-                {Object.entries(result.signals || {}).map(
-                  ([key, value]) =>
-                    value && (
-                      <div className="signal" key={key}>
-                        <span>⚠</span>
-                        {key
-                          .replaceAll("_", " ")
-                          .replace(/\b\w/g, (c) => c.toUpperCase())}
-                      </div>
-                    )
-                )}
+                {signalEntries.map(([key]) => (
+                  <div className="signal" key={key}>
+                    <span>⚠</span>
 
-                {!Object.values(result.signals || {}).some(Boolean) && (
+                    {key
+                      .replaceAll("_", " ")
+                      .replace(/\b\w/g, (c) => c.toUpperCase())}
+                  </div>
+                ))}
+
+                {signalEntries.length === 0 && (
                   <div className="no-signals">
                     ✓ No explicit scam signals detected.
                   </div>
@@ -226,12 +271,18 @@ A refundable registration fee is required before onboarding..."
                 <div className="evidence-list">
                   {Object.entries(result.evidence).map(
                     ([key, value]) => (
-                      <div className="evidence-item" key={key}>
+                      <div
+                        className="evidence-item"
+                        key={key}
+                      >
                         <strong>
                           {key
                             .replaceAll("_", " ")
-                            .replace(/\b\w/g, (c) => c.toUpperCase())}
+                            .replace(/\b\w/g, (c) =>
+                              c.toUpperCase()
+                            )}
                         </strong>
+
                         <p>
                           {Array.isArray(value)
                             ? value.join(" ")
@@ -249,15 +300,18 @@ A refundable registration fee is required before onboarding..."
             </div>
 
             {result.explanation && (
-            <div className="result-section explanation">
-             <div className="section-title">
-             <span>🤖</span>
-            <h3>AI Explanation</h3>
-            </div>
+              <div className="result-section explanation">
+                <div className="section-title">
+                  <span>🤖</span>
+                  <h3>AI Explanation</h3>
+                </div>
 
-    <ReactMarkdown>{result.explanation}</ReactMarkdown>
-  </div>
-)}
+                <ReactMarkdown>
+                  {result.explanation}
+                </ReactMarkdown>
+              </div>
+            )}
+
             {result.signal_veto_triggered && (
               <div className="security-notice">
                 🛡️ <strong>Safety override activated.</strong>
@@ -271,8 +325,8 @@ A refundable registration fee is required before onboarding..."
 
         <footer>
           <p>
-            JobShield AI provides risk assessment and should not be treated
-            as a definitive judgment about an employer.
+            JobShield AI provides risk assessment and should not be
+            treated as a definitive judgment about an employer.
           </p>
         </footer>
       </main>
