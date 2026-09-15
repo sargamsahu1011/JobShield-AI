@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "./App.css";
 
-const API_URL = "";
+const API_URL = "https://jobshield-ai-yqf1.onrender.com";
 
 function App() {
   const [jobText, setJobText] = useState("");
