@@ -1,16 +1,49 @@
-# React + Vite
+# JobShield AI — Web Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The web frontend for **JobShield AI**, an evidence-grounded recruitment scam detection system.
 
-Currently, two official plugins are available:
+The application provides a user-friendly interface for analyzing job postings and displaying:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fraud probability
+- Risk classification
+- Detected scam signals
+- Supporting evidence
+- Model information
+- Security/safety guidance
+- AI-generated explanation
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- Fetch API
+- Vercel for production deployment
 
-## Expanding the Oxlint configuration
+## Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+User
+  │
+  ▼
+React + Vite Frontend
+  │
+  │ POST /api/analyze
+  ▼
+JobShield AI Flask API
+  │
+  ├── Input Validation
+  ├── TF-IDF + Logistic Regression
+  ├── Platt Calibration
+  ├── Scam Signal Detection
+  ├── Evidence Extraction
+  ├── Prompt-Injection Detection
+  └── Gemini Explanation Layer
+  │
+  ▼
+Structured Analysis
+  │
+  ▼
+React UI
+```
